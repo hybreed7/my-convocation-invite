@@ -34,7 +34,7 @@ const EVENT = {
   note: "Five years of lectures, sleepless nights, clinical postings, difficult exams, countless challenges, silent tears, prayers, and moments when giving up felt easier have finally led me to this beautiful day. What began as a dream has become a journey of resilience, growth, sacrifice, and grace. Through every long night, every demanding clinical experience, every examination, and every obstacle, I kept going—and today, I am proud to say I made it. This journey was never mine alone. Your love, prayers, encouragement, and unwavering support carried me through some of the hardest moments, and I would be truly honoured to have you beside me as I celebrate this milestone. Five years. One incredible journey. One dream fulfilled. A lifetime of purpose ahead. Come celebrate with me as I officially close this chapter and step into the beautiful calling of Nursing. 💜🩺🎓",
   mapQuery: "Chrisland University Abeokuta",
   rsvpWhatsApp: "2349131576638",                    // e.g. "2348012345678" (no + or spaces). Leave "" to hide the RSVP button
-  footer: "Chrisland University, PMB 110101, Abeokuta, Ogun State",
+  footer: "Chrisland University, Ajebo Road after FMC, Abeokuta, Ogun State",
 };
 
 const SCHEDULE = [
@@ -102,11 +102,7 @@ export default function App() {
         <div className="stage">
           <div className="panel">
             <div className="school">
-              <img src={SchoolLogo} alt={EVENT.school} style={{
-                width: 70,
-                // height: 100,
-                objectFit: 'contain'
-              }}/>
+              <img src={SchoolLogo} alt={EVENT.school} />
               {/* <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 2l18 6v14c0 12-8 21-18 24C14 43 6 34 6 22V8z" fill="#2B1247"/><path d="M24 13l-12 5 12 5 12-5z" fill="#F2B544"/><path d="M17 22v6c4 3 10 3 14 0v-6" fill="none" stroke="#fff" strokeWidth="2"/></svg> */}
               <span>{EVENT.school}</span>
             </div>
