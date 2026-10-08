@@ -19,14 +19,14 @@ const EVENT = {
   ceremonySub: "& Induction into the Nursing Profession",  // shown in italics
   firstName: "Ayomide",              // shown in gold script
   fullName: "Ayomide Precious Sobowale",        // shown in bold
-  degree: "RN, RM, BNSC",
+  degree: "RN, RM, RPHN, BNSC",
   venue: "Chrisland University Campus",
   address: " Ajebo Road after FMC, Abeokuta, Ogun State.",
-  dateTop: "28th Oct.",
+  dateTop: "27th Oct.",
   dateBottom: "2026",
   timeTop: "10am",
   timeBottom: "[WAT]",
-  startISO: "2026-10-28T10:00:00+01:00", // used by countdown and calendar
+  startISO: "2026-10-27T10:00:00+01:00", // used by countdown and calendar
   durationHours: 3,
   badge: "8th",
   badgeText: "Convocation",
@@ -165,7 +165,7 @@ export default function App() {
           </div>
         </section>
 
-        <section>
+        {/* <section>
           <h2>How the day will go</h2>
           <div className="day">
             {SCHEDULE.map((s) => (
@@ -176,7 +176,7 @@ export default function App() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         <section>
           <h2>A note from me</h2>
