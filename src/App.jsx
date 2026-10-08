@@ -24,7 +24,7 @@ const EVENT = {
   address: " Ajebo Road after FMC, Abeokuta, Ogun State.",
   dateTop: "27th Oct.",
   dateBottom: "2026",
-  timeTop: "10am",
+  timeTop: "11am",
   timeBottom: "[WAT]",
   startISO: "2026-10-27T10:00:00+01:00", // used by countdown and calendar
   durationHours: 3,
