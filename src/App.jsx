@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import "./index.css";
 import SchoolLogo from "../src/Assets/cu-logo.png";
 import Portrait from "../src/Assets/portrait2.png";
-import Photo1 from "../src/Assets/a.jpeg";
+import Photo1 from "../src/Assets/100l.jpeg";
 import Photo2 from "../src/Assets/b.jpeg";
-import Photo3 from "../src/Assets/c.jpeg";
+import Photo3 from "../src/Assets/trio.jpeg";
 import Photo4 from "../src/Assets/d.jpeg";
-import Photo5 from "../src/Assets/e.jpeg";
+import Photo5 from "../src/Assets/100team.jpeg";
+import Photo6 from "../src/Assets/500l.jpeg";
+import Photo7 from "../src/Assets/babes.jpeg";
 
 /* =====================================================
    EDIT YOUR DETAILS HERE
@@ -45,10 +47,13 @@ const SCHEDULE = [
 
 /* Add your photos to /public and set src, e.g. src: "/photos/1.jpg". Leave src "" to show the illustration. */
 const GALLERY = [
-  { caption: "Project Defense", src: Photo4, art: <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice"><rect width="400" height="320" fill="#7A3FD1"/><circle cx="200" cy="170" r="120" fill="#F2B544" opacity=".35"/><g fill="#1A0B2E"><path d="M90 90l40-14 40 14-40 14z"/><path d="M230 60l40-14 40 14-40 14z" transform="rotate(14 270 60)"/><path d="M150 40l40-14 40 14-40 14z" transform="rotate(-10 190 40)"/></g><g fill="#FF6B8B"><circle cx="70" cy="60" r="6"/><circle cx="340" cy="120" r="8"/></g><path d="M60 320c10-70 60-100 140-100s130 30 140 100z" fill="#1A0B2E"/><circle cx="200" cy="200" r="40" fill="#8D5A3B"/></svg> },
-  { caption: "Choir", src: Photo2, art: <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice"><rect width="200" height="150" fill="#FFC9E3"/><path d="M30 150V70l70-40 70 40v80z" fill="#fff"/><path d="M80 150v-50a20 20 0 0140 0v50z" fill="#7A3FD1"/><circle cx="100" cy="60" r="10" fill="#F2B544"/></svg> },
-  { caption: "With Simi", src: Photo1, art: <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice"><rect width="200" height="150" fill="#F2B544"/><g fill="#2B1247"><circle cx="60" cy="60" r="16"/><circle cx="100" cy="50" r="18"/><circle cx="145" cy="62" r="15"/><path d="M30 150c0-4₀ 14-6₀ 3₀-6₀s3₀ 2₀ 3₀ 6₀zM76 15₀c₀-4₆ ₁₂-7₀ ₂₄-7₀s₂₆ ₂₄ ₂₆ 7₀zM₁₂₀ 15₀c₀-4₀ ₁₂-5₈ ₂₆-5₈s₂₆ ₁₈ ₂₆ 5₈z"/></g></svg> },
-  { caption: "The Trios", src: Photo3, art: <svg viewBox="0 0 2００ １５０" preserveAspectRatio="xMidYMid slice"><rect width="４００" height="100" fill="#１７Ｂ３Ａ３"/><rect x="１１０" y="３４" width="１８０" height="８２" rx="８" fill="#fff"/><path d="Ｍ１３０ ６２h１４０M１３０ ８０h１１０" stroke="#２Ｂ１２４７" strokeWidth="６" strokeLinecap="round"/><circle cx="２７０" cy="１０４" r="１６" fill="#Ｆ２Ｂ５４４"/></svg> },
+  { caption: "The Beginning of a Journey Worth Remembering.", src: Photo1, art: <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice"><rect width="200" height="150" fill="#F2B544"/><g fill="#2B1247"><circle cx="60" cy="60" r="16"/><circle cx="100" cy="50" r="18"/><circle cx="145" cy="62" r="15"/><path d="M30 150c0-4₀ 14-6₀ 3₀-6₀s3₀ 2₀ 3₀ 6₀zM76 15₀c₀-4₆ ₁₂-7₀ ₂₄-7₀s₂₆ ₂₄ ₂₆ 7₀zM₁₂₀ 15₀c₀-4₀ ₁₂-5₈ ₂₆-5₈s₂₆ ₁₈ ₂₆ 5₈z"/></g></svg> },
+  { caption: "100L Roommates, Forever Sisters.",src: Photo5, alt: "Photo 5" },
+  { caption: "Singing His Praises all the time and forever Grateful.", src: Photo2, art: <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid slice"><rect width="200" height="150" fill="#FFC9E3"/><path d="M30 150V70l70-40 70 40v80z" fill="#fff"/><path d="M80 150v-50a20 20 0 0140 0v50z" fill="#7A3FD1"/><circle cx="100" cy="60" r="10" fill="#F2B544"/></svg> },
+  {caption: "My Babies, My Forever Girls.", src: Photo7, alt: "Photo 7" },
+  { caption: "The Trio", src: Photo3, alt: "The trio together", layout: "full", art: <svg viewBox="0 0 2００ １５０" preserveAspectRatio="xMidYMid slice"><rect width="４００" height="100" fill="#１７Ｂ３Ａ３"/><rect x="１１０" y="３４" width="１８０" height="２" rx="８" fill="#fff"/><path d="Ｍ１３０ ６２h１４０M１３０ ８０h１１０" stroke="#２B１２４７" strokeWidth="６" strokeLinecap="round"/><circle cx="２７０" cy="１０４" r="１６" fill="#Ｆ２Ｂ５４４"/></svg> },
+  {caption: "500L: Look How Far We've Come! 🎓❤️", src: Photo6, alt: "Photo 6" },
+  { caption: "One Step Closer to the Graduation Gown.", src: Photo4, art: <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice"><rect width="400" height="320" fill="#7A3FD1"/><circle cx="200" cy="170" r="120" fill="#F2B544" opacity=".35"/><g fill="#1A0B2E"><path d="M90 90l40-14 40 14-40 14z"/><path d="M230 60l40-14 40 14-40 14z" transform="rotate(14 270 60)"/><path d="M150 40l40-14 40 14-40 14z" transform="rotate(-10 190 40)"/></g><g fill="#FF6B8B"><circle cx="70" cy="60" r="6"/><circle cx="340" cy="120" r="8"/></g><path d="M60 320c10-70 60-100 140-100s130 30 140 100z" fill="#1A0B2E"/><circle cx="200" cy="200" r="40" fill="#8D5A3B"/></svg> },
 ];
 
 /* ===================================================== */
@@ -187,9 +192,9 @@ export default function App() {
           <h2>Moments to remember</h2>
           <div className="gal">
             {GALLERY.map((g) => (
-              <figure key={g.caption}>
-                {g.src ? <img src={g.src} alt={g.caption} /> : g.art}
-                <figcaption>{g.caption}</figcaption>
+              <figure className={g.layout || ""} key={g.src}>
+                {g.src ? <img src={g.src} alt={g.alt || g.caption} /> : g.art}
+                {g.caption && <figcaption>{g.caption}</figcaption>}
               </figure>
             ))}
           </div>
